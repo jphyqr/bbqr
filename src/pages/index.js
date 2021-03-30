@@ -28,7 +28,7 @@ function Index() {
       <p>
        We are bringing central texas style barbacue to 2167 Hamilton Street.  This style of cooking involves slowly smoking cuts of meat (Brisket, Ribs, Chickens, Turkeys) in a specially designed smoker that produces the cleanest fire, a salivating aroma, and the most tender, juicy and flavourful meal you can imagine.
       </p>
-      <img src="https://source.unsplash.com/random/400x200" alt="" />
+      <img src="/500gal.png" height="400" width="400" alt="" />
       <br />
       <h2>The date according to Node.js (TypeScript) is:</h2>
       {/* <p>{date ? date : "Loading date..."}</p> */}
@@ -37,3 +37,5 @@ function Index() {
 }
 
 export default Index;
+
+//add image 
