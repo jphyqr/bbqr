@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
+import SEO from "../components/seo";
 import "../styles/index.css";
 
 function Index() {
@@ -14,15 +15,12 @@ function Index() {
   }, []);
   return (
     <main >
-      <Helmet
-       htmlAttributes={{
-        lang: 'en',
-      }}
-      >
-        <title>{`BBQR${process.env.NODE_ENV==="development"?"-DEV":""}` }
-
-        </title>
-      </Helmet>
+      <SEO 
+      title="BBQR Home"
+      description="BBQ in Regina SK"
+      image="/500gal.png"
+      article="null"
+      />
       <h1>BBQR</h1>
       <h2>
         Central Style BBQ in downtown Regina
