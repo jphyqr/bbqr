@@ -1,7 +1,8 @@
+import loadable from "@loadable/component";
 import React, { useEffect, useState } from "react";
-
-import SEO from "../components/seo";
 import "../styles/index.css";
+const SEO = loadable(()=>import('../components/seo'))
+
 
 function Index() {
   const [date, setDate] = useState(null);
