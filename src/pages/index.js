@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
+
 import SEO from "../components/seo";
 import "../styles/index.css";
 
