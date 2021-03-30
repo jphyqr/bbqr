@@ -13,9 +13,15 @@ function Index() {
     getDate();
   }, []);
   return (
-    <main lang="en">
-      <Helmet>
-        <title>BBQR</title>
+    <main >
+      <Helmet
+       htmlAttributes={{
+        lang: 'en',
+      }}
+      >
+        <title>{`BBQR${process.env.NODE_ENV==="development"?"-DEV":""}` }
+
+        </title>
       </Helmet>
       <h1>BBQR</h1>
       <h2>
