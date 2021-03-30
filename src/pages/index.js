@@ -13,7 +13,7 @@ function Index() {
     getDate();
   }, []);
   return (
-    <main>
+    <main lang="en">
       <Helmet>
         <title>BBQR</title>
       </Helmet>
