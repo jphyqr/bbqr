@@ -9,6 +9,20 @@ module.exports = {
     twitterUsername: "@occlumency",
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        devMode: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-loadable-components-ssr`,
+      options: {
+          // Whether replaceHydrateFunction should call ReactDOM.hydrate or ReactDOM.render
+          // Defaults to ReactDOM.render on develop and ReactDOM.hydrate on build
+          useHydrate: true,
+      },
+  },
     `gatsby-plugin-react-helmet`,     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
