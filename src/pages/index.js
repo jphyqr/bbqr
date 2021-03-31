@@ -1,27 +1,27 @@
-//import loadable from "@loadable/component";
-import React from "react";
+import loadable from "@loadable/component";
+import React, { useEffect, useState } from "react";
 import "../styles/index.css";
-//const SEO = loadable(()=>import('../components/seo'))
+const SEO = loadable(()=>import('../components/seo'))
 
 
 function Index() {
-  // const [date, setDate] = useState(null);
-  // useEffect(() => {
-  //   async function getDate() {
-  //     const res = await fetch("/api/date");
-  //     const newDate = await res.text();
-  //     setDate(newDate);
-  //   }
-  //   getDate();
-  // }, []);
+  const [date, setDate] = useState(null);
+  useEffect(() => {
+    async function getDate() {
+      const res = await fetch("/api/date");
+      const newDate = await res.text();
+      setDate(newDate);
+    }
+    getDate();
+  }, []);
   return (
     <main >
-      {/* <SEO 
+      <SEO 
       title="BBQR Home"
       description="BBQ in Regina SK"
       image="/500gal.png"
       article="null"
-      /> */}
+      />
       <h1>BBQR</h1>
       <h2>
         Central Style BBQ in downtown Regina
