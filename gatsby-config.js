@@ -9,6 +9,33 @@ module.exports = {
     twitterUsername: "@occlumency",
   },
   plugins: [
+
+    {
+      resolve: 'gatsby-source-firestore',
+      options: {
+        credential: require("./firebase.json"),
+        types: [
+          {
+            type: 'Book',
+            collection: 'books',
+            map: doc => ({
+              title: doc.title,
+              isbn: doc.isbn,
+ 
+            }),
+          },
+          {
+            type: 'Author',
+            collection: 'authors',
+            map: doc => ({
+              name: doc.name,
+              country: doc.country,
+              books___NODE: doc.books.map(book => book.id),
+            }),
+          },
+        ],
+      },
+    },
     {
       resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
       options: {

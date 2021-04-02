@@ -51,9 +51,8 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
-# dotenv environment variables file
-.env
-.env.build
+# dotenv environment variable files
+.env*
 
 # gatsby files
 .cache/
@@ -61,12 +60,10 @@ public
 
 # Mac files
 .DS_Store
-
+.firebase.json
 # Yarn
 yarn-error.log
 .pnp/
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
-
-.vercel
