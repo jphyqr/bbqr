@@ -9,28 +9,26 @@ module.exports = {
     twitterUsername: "@occlumency",
   },
   plugins: [
-
     {
-      resolve: 'gatsby-source-firestore',
+      resolve: "gatsby-source-firestore",
       options: {
-        credential: require("./firebase.json"),
+        credential: process.env.firebase,
         types: [
           {
-            type: 'Book',
-            collection: 'books',
-            map: doc => ({
+            type: "Book",
+            collection: "books",
+            map: (doc) => ({
               title: doc.title,
               isbn: doc.isbn,
- 
             }),
           },
           {
-            type: 'Author',
-            collection: 'authors',
-            map: doc => ({
+            type: "Author",
+            collection: "authors",
+            map: (doc) => ({
               name: doc.name,
               country: doc.country,
-              books___NODE: doc.books.map(book => book.id),
+              books___NODE: doc.books.map((book) => book.id),
             }),
           },
         ],
@@ -45,26 +43,27 @@ module.exports = {
     {
       resolve: `gatsby-plugin-loadable-components-ssr`,
       options: {
-          // Whether replaceHydrateFunction should call ReactDOM.hydrate or ReactDOM.render
-          // Defaults to ReactDOM.render on develop and ReactDOM.hydrate on build
-          useHydrate: true,
+        // Whether replaceHydrateFunction should call ReactDOM.hydrate or ReactDOM.render
+        // Defaults to ReactDOM.render on develop and ReactDOM.hydrate on build
+        useHydrate: true,
       },
-  },
-    `gatsby-plugin-react-helmet`,     {
-      resolve: 'gatsby-plugin-robots-txt',
+    },
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: 'https://bbqr.vercel.app',
-        sitemap: 'https://bbqr.vercel.app/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        host: "https://bbqr.vercel.app",
+        sitemap: "https://bbqr.vercel.app/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatsby + Node.js (TypeScript) API',
-        short_name: 'Gatsby + Node.js (TypeScript)',
-        start_url: '/',
-        icon: 'src/images/gatsby-icon.png',
+        name: "Gatsby + Node.js (TypeScript) API",
+        short_name: "Gatsby + Node.js (TypeScript)",
+        start_url: "/",
+        icon: "src/images/gatsby-icon.png",
       },
     },
   ],

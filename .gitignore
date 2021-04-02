@@ -60,7 +60,7 @@ public
 
 # Mac files
 .DS_Store
-.firebase.json
+firebase.json
 # Yarn
 yarn-error.log
 .pnp/
