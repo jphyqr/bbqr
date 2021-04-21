@@ -27,8 +27,8 @@ function Index({ data }) {
 
   return (
     <MenuLayout>
-      <h1>ribsket</h1>
-
+      <h1>The Chuckwagon</h1>
+      <h3>Open May 1st, 2021</h3>
       <h3>14th and Hamilton</h3>
       <VerticalSpacer height='20' />
       <div className='background-img' alt='brisket in regina' />
@@ -43,21 +43,12 @@ function Index({ data }) {
       </div>
 
       <VerticalSpacer height='20' />
-      <h2>Texas Style BBQ in downtown Regina</h2>
+      <h2>Icecream and More in Downtown Regina</h2>
       <VerticalSpacer height='10' />
       <p>
-        Ribsket is ... Ribs + Brisket with a variety of elevated sides that mix
-        central Texas with Saskatchewan comfort.{" "}
+        The closest ice cream to Wascana Park, Victoria Park and Central Park
       </p>
       <VerticalSpacer height='20' />
-      <h2>The Pit</h2>
-      <VerticalSpacer height='10' />
-      <p>
-        {" "}
-        Our 500 gallon offset smoker was repurposed from a local farm, and
-        fabricated in Saskatchewan. It is designed to have the most consistent
-        draw and produce the cleanest burn.
-      </p>
 
       <style jsx>{`
         .menu {
@@ -85,7 +76,7 @@ function Index({ data }) {
           .background-img {
             width: 100vw;
             height: 200px;
-            background-image: url(plate.png);
+            background-image: url(icecream.png);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
