@@ -86,7 +86,7 @@ function Index({ data }) {
           .background-img {
             width: 100vw;
             height: 400px;
-            background-image: url(plate.png);
+            background-image: url(icecream.png);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
